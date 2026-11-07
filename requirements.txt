@@ -1,0 +1,16 @@
+# Site Sentinel - CPU-only. torch/torchvision must be the +cpu wheels on Windows.
+# Install torch first from the CPU index, then the rest:
+#   pip install torch==2.14.1+cpu torchvision==0.29.1+cpu --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+numpy==2.2.6
+opencv-python-headless==4.10.0.84
+ultralytics==8.4.191
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+streamlit==1.65.0
+reportlab==5.1.0
+# v0.2: dashboard charts/tables + browser-playable (H.264) annotated videos
+altair>=5
+pandas>=2
+imageio-ffmpeg>=0.5

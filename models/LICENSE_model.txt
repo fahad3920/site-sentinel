@@ -1,0 +1,32 @@
+---
+license: apache-2.0
+language:
+- en
+metrics:
+- accuracy
+base_model:
+- Ultralytics/YOLO11
+pipeline_tag: object-detection
+tags:
+- construction-site
+- safety-vest
+- hard-hat
+---
+# predict 5 classes
+* "names": ['hat','nohat','novest','person','vest']
+# Performance
+* yolo11n series : mAP50 0.708 
+* yolo11m series : mAP50 0.809
+
+# Showcase
+* ![showcase](https://raw.githubusercontent.com/nonwesjoe/YOLO-safety-detection/main/predicted.jpg)
+# Usage
+* <pre>
+from ultralytics import YOLO
+import cv2
+model = YOLO("yolo11m_safety.pt")
+img= r"test.jpeg"
+results = model(img)
+predicted = results[0].plot()
+cv2.imwrite('predicted.jpg', predicted)
+</pre>

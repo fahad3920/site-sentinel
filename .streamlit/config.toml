@@ -1,0 +1,13 @@
+# Site Sentinel dark theme (safety orange). Streamlit reads this when started from the project folder.
+[theme]
+base = "dark"
+primaryColor = "#F97316"
+backgroundColor = "#070B14"
+secondaryBackgroundColor = "#0F172A"
+textColor = "#E5E7EB"
+
+[server]
+maxUploadSize = 500
+
+[browser]
+gatherUsageStats = false
